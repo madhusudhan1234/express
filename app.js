@@ -12,8 +12,7 @@ app.get('/index.html', function (req, res) {
    	res.sendFile( __dirname + "/" + "index.html" );
 
    	db.all("SELECT * FROM users", function(err,row){
-    //console.log(row);
-    res.end(JSON.stringify(row));
+      console.log(row);
   });
 })
 
